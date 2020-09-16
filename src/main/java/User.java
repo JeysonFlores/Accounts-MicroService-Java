@@ -1,5 +1,6 @@
 import org.ietf.jgss.*;
 import javax.persistence.*;
+
 @Table(name="user")
 public class User {
 
