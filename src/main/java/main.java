@@ -35,11 +35,11 @@ public class main {
                 Algorithm algorithm = Algorithm.HMAC256("asdasdasdasdads323f");
                 JSONObject reqjson = new JSONObject(request.body());
                 List<User> query = db.where("email=? and password=?", reqjson.get("email"),reqjson.get("password")).results(User.class);
-                User nu = query.get(0);
+                User userqueried = query.get(0);
                 String token = JWT.create()
                         .withClaim("exp", new Date(new Date().getTime() + (50 * 60000)))
-                        .withClaim("id", nu.id)
-                        .withClaim("email", nu.email)
+                        .withClaim("id", userqueried.id)
+                        .withClaim("email", userqueried.email)
                         .sign(algorithm);
                 return new JSONObject("{ error: '0', token: "+token+" }");
             }
