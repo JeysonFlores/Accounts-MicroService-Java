@@ -1,6 +1,6 @@
 # Accounts-MicroService-Java
 
-This microservice works using the Spark Framework, uses MySQL as DBM with Norm as ORM, encrypts the login data with JWT and receives and responds data       using JSON.
+This microservice (is a rewriting of the accounts microservice in crystal) works using the Spark Framework, uses MySQL as DBM with Norm as ORM, encrypts the login data with JWT and receives and responds data       using JSON.
   
   <h2> [POST]   /signup </h3>
   <h3> Request format </h1>
